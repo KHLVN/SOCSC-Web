@@ -1,0 +1,233 @@
+:root {
+    --text-color: #000000;
+    --header-color: #D4AF37;
+    --main-blue: #45567d;
+    --main-gray: #FFFDD0;
+}
+
+@media (min-width: 28.75em) {
+    h1, h2 {
+        font-size: 4rem;
+    }
+}
+
+html {
+    font-size: 65%;
+    font-family: Raleway, sans-serif;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    color: black;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV SECTION*/
+
+#navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--header-color);
+    width: 100%;
+    height: 10vh;
+    z-index: 10;
+}
+
+#navbar a {
+    display: block;
+    font-size: 2.25rem;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+    vertical-align: middle;
+    align-items: center;
+}
+
+#navbar a:hover {
+    background-color: var(--main-blue);
+    z-index: inherit;
+}
+
+/* WELCOME SECTION */
+
+#welcome-section {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Ensures no scrolling */
+}
+
+#welcome-section::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/rizalbg.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(8px); /* Blurs the background image */
+    z-index: -1; /* Places it behind the text */
+}
+
+.projects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px);
+}
+
+.animation > p {
+    position: relative; /* Ensure it stays above the pseudo-element */
+    -webkit-text-stroke: 2px black; /* Adds a black stroke */
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-gray);
+    text-align: center;
+    z-index: 1; /* Ensures text appears above the background */
+}
+
+.animation > h1 {
+    -webkit-text-stroke: 2px black;/* Adds a black stroke */
+}
+
+.animation > p {
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-gray);
+    text-align: center;
+}
+
+.animation {
+    animation: 1s ease-in fade;
+}
+
+/* PROJECTS */
+
+.projects {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-blue);
+}
+
+.projects h2 {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 4rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+.project-tile {
+    display: block;
+    width: 210px;
+    height: 300px;
+    margin: 10px;
+    background-color: var(--main-gray);
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
+}
+
+/* CONTACTS */
+
+.contacts {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-gray);
+}
+
+.contacts h2 {
+    font-size: 8rem;
+}
+
+.contacts p {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--text-color)
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+/* ANIMATIONS */
+
+@keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
