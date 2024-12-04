@@ -259,7 +259,7 @@ iframe {
     letter-spacing: 0.6px;
     column-width: 25rem;
     text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Raleway', Times, serif;
   }
 
 .text-desc p {
@@ -327,10 +327,17 @@ iframe {
     background-color: var(--main-gray);
 }
 
-.footer ul li{
-    text-align: center;
-    padding: 5px;
-    font-size: 20px;
+footer div {
+    font-size: 19px;
+    margin: 10px 10px;
+}
+
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    text-align: center; /* Center text inside each column */
 }
 
 /* ANIMATIONS */
