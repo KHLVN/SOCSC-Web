@@ -383,6 +383,7 @@ footer div {
 }
 .pdf-view{
     margin: 0;
+    width: 90%;
     resize: vertical;
     overflow: auto;
     justify-items: center;
